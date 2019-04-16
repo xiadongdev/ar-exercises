@@ -10,11 +10,11 @@ puts "Exercise 7"
 puts "----------"
 
 
-p = Employee.create(hourly_rate: 201)
+p = Employee.create!(hourly_rate: 201)
 puts p.valid?
 puts p.errors.messages
 
-s = Store.create(name: "CA", annual_revenue: 33.3, mens_apparel: false, womens_apparel: false)
+s = Store.create!(name: "CA", annual_revenue: 33.3, mens_apparel: false, womens_apparel: false)
 puts s.valid?
 puts s.errors.details[:name]
 puts s.errors.details[:annual_revenue]
